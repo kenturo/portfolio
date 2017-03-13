@@ -36,10 +36,10 @@ gulp.task('sass:watch', function() {
 gulp.task('concat', function() {
   return gulp.src('./js/**/*.js')
             .pipe(order([
-              './js/vendor/jquery-3.1.1.min.js',
-              './js/vendor/**/*.js',
-              './js/main.js',
-              './js/components/**/*.js'
+              '/js/vendor/jquery-3.1.1.min.js',
+              '/js/vendor/**/*.js',
+              '/js/main.js',
+              '/js/components/**/*.js'
             ]))
             .pipe(concat('main.js', {newLine: ';'}))
             .pipe(gulp.dest('./public/js'));
@@ -50,10 +50,10 @@ gulp.task('concat:sourcemaps', function() {
   return gulp.src('./js/**/*.js')
             .pipe(sourcemaps.init())
             .pipe(order([
-              './js/vendor/jquery-3.1.1.min.js',
-              './js/vendor/**/*.js',
-              './js/main.js',
-              './js/components/**/*.js'
+              '/js/vendor/jquery-3.1.1.min.js',
+              '/js/vendor/**/*.js',
+              '/js/main.js',
+              '/js/components/**/*.js'
             ]))
             .pipe(concat('main.js', {newLine: ';'}))
             .pipe(sourcemaps.write('./'))
