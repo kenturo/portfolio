@@ -1,13 +1,15 @@
-.header{
+.header {
+  background: url("http://anhdev.com/wp-content/uploads/2018/05/game_design.gif")
+    center center;
+  background-size: cover;
   background-color: #000;
   min-height: 400px;
-  color:#fff;
-
-  h1{
+  color: #fff;
+  h1 {
     font-size: 50px;
     margin-bottom: 5px;
   }
-  h2{
+  h2 {
     margin-top: 5px;
     font-size: 25px;
     text-transform: capitalize;
