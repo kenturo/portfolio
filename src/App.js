@@ -1,6 +1,7 @@
 import React from "react";
 import { Parallax } from "react-parallax";
 import { Grid, Row, Col } from "react-flexbox-grid";
+import { Circle } from "rc-progress";
 
 import bgGame from "./statics/bg-game.gif";
 import bgCode from "./statics/coding-min.jpg";
@@ -23,6 +24,26 @@ const insideStyles = {
   transform: "translate(-50%,-50%)",
   lineHeight: 1.5,
   fontSize: 60
+};
+
+const styleProgress = {
+  width: "50%",
+  margin: " 0 auto",
+  clear: "both",
+  display: "block"
+};
+
+const lableProgress = {
+  position: "absolute",
+  left: " 50%",
+  top: " 50%",
+  transform: " translate(-50%,-50%)",
+  fontSize: 25
+};
+
+const subLableSkill = {
+  fontSize: 20
+  // textAlign: "left"
 };
 
 const App = () => (
@@ -77,15 +98,84 @@ const App = () => (
           style={{
             color: "white",
             padding: 20,
-            lineHeight: 1.5,
             fontSize: 60
           }}
         >
           <Grid fluid>
             <Row>
-              <Col xs={4}>React</Col>
-              <Col xs={4}>React Native</Col>
-              <Col xs={4}>NodeJS</Col>
+              <h3
+                style={{
+                  textAlign: "center",
+                  width: "100%"
+                }}
+              >
+                Skills
+              </h3>
+            </Row>
+            <Row>
+              <Col xs={3}>
+                <div style={{ position: "relative" }}>
+                  <Circle
+                    percent="95"
+                    strokeWidth="4"
+                    trailWidth="4"
+                    strokeColor="#85D262"
+                    trailColor="#85D26250"
+                    style={styleProgress}
+                  />
+                  <span style={lableProgress}>HTML/CSS</span>
+                </div>
+                <p style={subLableSkill}>
+                  Include: HTML(5), CSS(3), SVG, Canvas, Sprite
+                </p>
+              </Col>
+              <Col xs={3}>
+                <div style={{ position: "relative" }}>
+                  <Circle
+                    percent="75"
+                    strokeWidth="4"
+                    trailWidth="4"
+                    strokeColor="#85D262"
+                    trailColor="#85D26250"
+                    style={styleProgress}
+                  />
+                  <span style={lableProgress}>SPA</span>
+                </div>
+                <p style={subLableSkill}>
+                  Include: React (Ecosystem),Redux, VueJS ( and Ecosystem)
+                </p>
+              </Col>
+
+              <Col xs={3} style={{ position: "relative" }}>
+                <div style={{ position: "relative" }}>
+                  <Circle
+                    percent="55"
+                    strokeWidth="4"
+                    trailWidth="4"
+                    strokeColor="#85D262"
+                    trailColor="#85D26250"
+                    style={styleProgress}
+                  />
+                  <span style={lableProgress}>NodeJS/SSR</span>
+                </div>
+                <p style={subLableSkill}>
+                  Basic NodeJS, Server Side Rendering, NextJS
+                </p>
+              </Col>
+              <Col xs={3}>
+                <div style={{ position: "relative" }}>
+                  <Circle
+                    percent="55"
+                    strokeWidth="4"
+                    trailWidth="4"
+                    strokeColor="#85D262"
+                    trailColor="#85D26250"
+                    style={styleProgress}
+                  />
+                  <span style={lableProgress}>Mobile</span>
+                </div>
+                <p style={subLableSkill}>Only one: React Native</p>
+              </Col>
             </Row>
           </Grid>
         </div>
