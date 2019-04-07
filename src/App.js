@@ -1,5 +1,5 @@
 import React from "react";
-import { Parallax } from "react-parallax";
+import { Parallax, Background } from "react-parallax";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import { Circle } from "rc-progress";
 
@@ -8,6 +8,8 @@ import bgCode from "./statics/coding-min.jpg";
 import bgNoise from "./statics/noise.png";
 import bgCompany from "./statics/company.jpg";
 import bgContact from "./statics/bgContact.jpg";
+import logoTiki from "./statics/logo-tiki.png";
+import logoVNG from "./statics/logo-vng.png";
 
 const styles = {
   // fontFamily: "sans-serif",
@@ -185,23 +187,50 @@ const App = () => (
     <Parallax
       bgImage={bgCompany}
       strength={200}
-      renderLayer={() => (
-        <div>
-          <div
-            style={{
-              position: "absolute",
-              background: "#00000068",
-              left: 0,
-              top: 0,
-              width: "100%",
-              height: "100%"
-            }}
-          />
-        </div>
-      )}
+      // renderLayer={() => (
+      //   <div>
+      //     <div
+      //       style={{
+      //         position: "absolute",
+      //         background: "#00000068",
+      //         left: 0,
+      //         top: 0,
+      //         width: "100%",
+      //         height: "100%"
+      //       }}
+      //     />
+      //   </div>
+      // )}
     >
-      <div style={{ height: "100vh" }}>
-        <div style={insideStyles}>Company Info</div>
+      <div
+        style={{ height: "100vh", color: "white", padding: 20, fontSize: 30 }}
+      >
+        <Grid fluid>
+          <Row>
+            <h3
+              style={{
+                textAlign: "center",
+                width: "100%"
+              }}
+            >
+              Company
+            </h3>
+          </Row>
+          <Row>
+            <Col xs={6}>
+              <Background className="custom-bg">
+                <img src={logoVNG} alt="vng logo" />
+              </Background>
+              VNG
+            </Col>
+            <Col xs={6}>
+              <Background className="custom-bg">
+                <img src={logoTiki} alt="vng logo" />
+              </Background>
+              Tiki.vn
+            </Col>
+          </Row>
+        </Grid>
       </div>
     </Parallax>
 
