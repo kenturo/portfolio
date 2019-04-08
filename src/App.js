@@ -10,6 +10,8 @@ import bgCompany from "./statics/company.jpg";
 import bgContact from "./statics/bgContact.jpg";
 import logoTiki from "./statics/logo-tiki.png";
 import logoVNG from "./statics/logo-vng.png";
+import logoParadise from "./statics/logo-paradise.png";
+import logoKietda from "./statics/logo-kietda.png";
 
 const styles = {
   // fontFamily: "sans-serif",
@@ -50,6 +52,16 @@ const subLableSkill = {
 
 const App = () => (
   <div style={styles}>
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: 10
+      }}
+    >
+      <img src={logoKietda} alt="vng logoKietda" />
+    </div>
     <Parallax
       bgImage={bgGame}
       strength={0}
@@ -213,21 +225,166 @@ const App = () => (
                 width: "100%"
               }}
             >
-              Company
+              &nbsp;
             </h3>
           </Row>
           <Row>
-            <Col xs={6}>
-              <Background className="custom-bg">
-                <img src={logoVNG} alt="vng logo" />
-              </Background>
-              VNG
+            <Col xs={4}>
+              <div
+                style={{
+                  color: "white",
+                  padding: 20,
+                  fontSize: 20,
+                  background: "#00000060"
+                }}
+              >
+                <Background className="custom-bg">
+                  <img src={logoVNG} alt="vng logo" height="120" />
+                </Background>
+                <span>08.2012 - 02.2016</span>
+
+                <div
+                  style={{
+                    textAlign: "left",
+                    fontSize: 16,
+                    lineHeight: 1.5,
+                    display: "inline-block",
+                    height: "300px"
+                  }}
+                >
+                  <p
+                    style={{
+                      marginBottom: 0,
+                      paddingBottom: 0
+                    }}
+                  >
+                    Stack: C#, SQL, LDAP, Mailbox Exchange
+                  </p>
+                  <ul
+                    style={{
+                      marginTop: 0,
+                      paddingTop: 0
+                    }}
+                  >
+                    <li>CMS Management Employment</li>
+                    <li>Service Automate Domain Account</li>
+                    <li>Asset Management IT Helpdesk</li>
+                  </ul>
+
+                  <p
+                    style={{
+                      marginBottom: 0,
+                      paddingBottom: 0
+                    }}
+                  >
+                    Stack: HTML, CSS, JS
+                  </p>
+                  <ul
+                    style={{
+                      marginTop: 0,
+                      paddingTop: 0
+                    }}
+                  >
+                    <li>CMS builder website/LandingPage/Teaser/Subweb game</li>
+                    <li>Write Library/Plugin core: FB api, google ap</li>
+                    <li>Rebuild VNG Site.</li>
+                  </ul>
+                </div>
+              </div>
             </Col>
-            <Col xs={6}>
-              <Background className="custom-bg">
-                <img src={logoTiki} alt="vng logo" />
-              </Background>
-              Tiki.vn
+            <Col xs={4}>
+              <div
+                style={{
+                  color: "white",
+                  padding: 20,
+                  fontSize: 20,
+                  background: "#00000060"
+                }}
+              >
+                <Background className="custom-bg">
+                  <img src={logoTiki} alt=" logo" />
+                </Background>
+                <div>08.2016 - 07.2018</div>
+
+                <div
+                  style={{
+                    textAlign: "left",
+                    fontSize: 16,
+                    display: "inline-block",
+                    lineHeight: 1.5,
+                    height: "300px"
+                  }}
+                >
+                  <p
+                    style={{
+                      marginBottom: 0,
+                      paddingBottom: 0
+                    }}
+                  >
+                    Stack: ReactJS, NodeJS, Redux
+                  </p>
+                  <ul
+                    style={{
+                      marginTop: 0,
+                      paddingTop: 0
+                    }}
+                  >
+                    <li>Seller Center Management ECommerce</li>
+                    <li>CMS LandingPage Tool</li>
+                    <li>Deal Management</li>
+                    <li>Inventory Management </li>
+                    <li>Requisition Management </li>
+                    <li>QnA Management </li>
+                    <li>Event BirthDay of Tiki</li>
+                    <li>Event Book's Festival</li>
+                  </ul>
+                </div>
+              </div>
+            </Col>
+            <Col xs={4}>
+              <div
+                style={{
+                  color: "white",
+                  padding: 20,
+                  fontSize: 20,
+                  background: "#00000060"
+                }}
+              >
+                <Background className="custom-bg">
+                  <img src={logoParadise} alt=" logo" height="120" />
+                </Background>
+                <div>07.2018 - Present</div>
+
+                <div
+                  style={{
+                    textAlign: "left",
+                    fontSize: 16,
+                    display: "inline-block",
+                    lineHeight: 1.5,
+                    height: "300px"
+                  }}
+                >
+                  <p
+                    style={{
+                      marginBottom: 0,
+                      paddingBottom: 0
+                    }}
+                  >
+                    Stack: ReactJS, NodeJS, Redux,VueJS
+                  </p>
+                  <ul
+                    style={{
+                      marginTop: 0,
+                      paddingTop: 0
+                    }}
+                  >
+                    <li>Analytic Network Tool</li>
+                    <li>SSL Tool</li>
+                    <li>Website Speed Test</li>
+                    <li>CDN Management</li>
+                  </ul>
+                </div>
+              </div>
             </Col>
           </Row>
         </Grid>
